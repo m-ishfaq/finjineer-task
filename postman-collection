@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "410fa923-be1a-457f-9e6f-fceef6f5810a",
+		"name": "Finjineer Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30205659",
+		"_collection_link": "https://ludosix11-apis.postman.co/workspace/cb6557b4-03cd-47b2-8897-02d9916c5f58/collection/30205659-410fa923-be1a-457f-9e6f-fceef6f5810a?source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "Fetch All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/inventory",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"inventory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fetch Single",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/inventory/1",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"inventory",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Quantity",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{localHost}}/inventory/1/quantity?quantity=-1",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"inventory",
+								"1",
+								"quantity"
+							],
+							"query": [
+								{
+									"key": "quantity",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"product_id\" : 4,\r\n    \"quantity\" : 1,\r\n    \"type\" : \"sale\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localHost}}/transactions",
+							"host": [
+								"{{localHost}}"
+							],
+							"path": [
+								"transactions"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localHost",
+			"value": "http://localhost:8000/api",
+			"type": "default"
+		}
+	]
+}
