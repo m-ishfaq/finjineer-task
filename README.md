@@ -57,3 +57,38 @@ composer install
 ```bash
 php artisan key:generate
 
+🛢️ Step 6: Create Database & Run Migrations
+Open your browser and go to: http://localhost/phpmyadmin
+
+Create a new database named: laravel_inventory
+
+Then run the following command in terminal:
+
+bash
+Copy
+Edit
+php artisan migrate --seed
+
+▶️ Step 7: Start Development Server
+bash
+Copy
+Edit
+php artisan serve
+
+
+📫 Postman API Collection
+A Postman collection is included in the project root:
+
+pgsql
+Copy
+Edit
+postman-collection.json
+🔄 To Use:
+Open Postman
+
+Click Import
+
+Select postman-collection.json
+
+Use the pre-configured endpoints:
+
