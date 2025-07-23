@@ -60,26 +60,7 @@ Rename `.env.example` to `.env`:
 ```bash
 copy .env.example .env
 
-```
-
-Edit the `.env` file and update the database section:
-
-```env
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel_inventory
-DB_USERNAME=root
-DB_PASSWORD=
-
-```
-
-> ⚠️ **Default XAMPP MySQL credentials:**
-> 
-> -   Username: `root`
->     
-> -   Password: _(empty)_
->     
+```  
 
 ----------
 
@@ -105,7 +86,7 @@ php artisan key:generate
 
 1.  Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
     
-2.  Create a new database named: `laravel_inventory`
+2.  Create a new database named: `task_finjineer`
     
 
 Then run:
@@ -125,9 +106,6 @@ This will create all necessary tables and seed them with demo data.
 php artisan serve
 
 ```
-
-Now visit: [http://127.0.0.1:8000](http://127.0.0.1:8000/)
-
 ----------
 
 ## 📫 Postman API Collection
@@ -148,13 +126,6 @@ postman-collection.json
 3.  Select `postman-collection.json`
     
 4.  Use the pre-configured endpoints:
-    
-
--   `POST /api/transactions`
-    
--   `GET /api/products`
-    
--   `GET /api/inventory`
     
 
 ----------
